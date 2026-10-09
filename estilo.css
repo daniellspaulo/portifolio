@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Darker+Grotesque:wght@300..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;  
+    box-sizing: border-box; /* Garante que paddings não aumentem o tamanho dos elementos */
+}
+
+body {
+    background-color:cadetblue;
+    color: #f6f6f6;
+    min-height: 100vh; /* Força o body a ter exatamente a altura da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribui cabeçalho no topo, conteúdo no meio e rodapé na base */
+    overflow: hidden; /* Mantém a tela travada sem rolar, já que tudo vai caber */
+}
+
+/* Reduzido o padding vertical de 10% para 2% para o conteúdo subir */
+.apresentacao{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 8%; 
+    gap: 82px;
+    flex-grow: 1; /* Faz esta seção ocupar todo o espaço central disponível */
+}
+
+.apresentacao-conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduzido levemente de 20px para economizar altura */
+}
+
+.cabecalho {
+    padding: 1% 0% 0% 5%;
+}
+
+.cabecalho-menu {
+    display: flex;
+    gap: 60px;
+}
+
+.menu-link {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem; 
+    font-weight: 600; 
+    color: red; 
+    text-decoration: none;
+}
+
+.menu-link:hover {
+    color: blueviolet;
+
+}
+/* Mudado o text-align para left para alinhar com o seu layout original */
+.apresentacao-titulo {
+    font-size: 2.25rem; 
+    font-family: "Krona One", sans-serif; 
+    color:brown;
+    text-align: left; 
+    padding: 0 0 10px 0; /* Removido padding geral para não criar espaço falso no topo */
+}
+
+.apresentacao-titulo:hover {
+    color: yellow;
+}
+
+.apresentacao-paragrafo {
+    font-size: 1.35rem; /* Reduzido levemente de 1.5rem para ajudar no encaixe vertical */
+    text-align: justify; 
+    font-family: "Montserrat", sans-serif;
+}
+
+.apresentacao-links {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px; /* Reduzido de 16px */
+}
+
+.apresentacao-links-subtitulo {
+    font-family: "Krona One", sans-serif;
+    font-weight: bold;
+    font-size: 1.35rem; /* Ajustado proporcionalmente */
+    margin-bottom: 5px;
+}
+
+.apresentacao-links2 {
+    width: 60%; /* Aumentado um pouco a largura para o texto não quebrar linha */
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.25rem; /* Ajustado de 1.5rem para caber melhor na caixa */
+    padding: 12px 0; /* Reduzido de 21.5px para os botões ficarem menos altos */
+    text-decoration: none;
+    color: #f6f6f6;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    border: 2px solid cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.apresentacao-links2:hover {
+    background-color: #272727;
+}
+
+span {
+    color: yellow;
+}
+
+.destaque {
+    color: orange;
+}
+
+footer {
+    text-align: center;
+    background-color: goldenrod;
+    color:antiquewhite;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 12px 0px; /* Ajustado para dar um espaçamento correto em cima e embaixo */
+}
+
+/* Modificado para controlar o tamanho vertical máximo da imagem */
+#imagem-principal {
+    border-radius: 48%;
+    border: 2px solid dimgray;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    max-height: 50vh; /* A imagem nunca vai passar de metade da altura da tela */
+    width: auto; /* Mantém a proporção horizontal correta */
+}
+
+.conteudo-texto {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    text-align: justify;
+    padding: 0% 15%;
+}
+
+/* Media Query - Mantida e corrigida a sintaxe do seletor */ 
+@media (max-width: 1080px) {
+    body {
+        overflow: auto; /* Permite rolagem apenas em telas de celular/tablets */
+    }
+    .b{
+        background-color:purple;
+    }
+    .cabecalho { 
+        padding: 10px;
+    }
+    .cabecalho-menu { /* Corrigido o ponto que faltava no seletor */
+        justify-content: center;
+    }
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+        gap: 30px;
+    }
+    .apresentacao-conteudo {
+        width: auto;
+    }
+    #imagem-principal {
+        max-height: 35vh;
+    }
+}
