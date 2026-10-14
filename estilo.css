@@ -148,6 +148,11 @@ footer {
 
 /* Media Query - Mantida e corrigida a sintaxe do seletor */ 
 @media (max-width: 1080px) {
+    /* para celulares muito pequenos (smartphones com menos de 600px*/ 
+@media only screen and  (max-width: 820px){ 
+    .exemplo { background-color: #ffd700; color: #e3dac9;}
+
+    
     body {
         overflow: auto; /* Permite rolagem apenas em telas de celular/tablets */
     }
